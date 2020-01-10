@@ -1,0 +1,75 @@
+.footer_content{
+    background: #F6F8EB;
+    padding: 15px 0px;
+    .slovo{
+        position: relative;
+        text-align: center;
+        width: 100%;
+        padding: 25px 0px;
+        &:after{
+            content: " ";
+            width: 42%;
+            position: absolute;
+            background: #000;
+            height: 1px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+        &:before{
+            content: " ";
+            width: 42%;
+            position: absolute;
+            background: #000;
+            height: 1px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+        }
+    }
+    .row{
+        justify-content: space-between;
+    }
+    .block{
+        .tel_block{
+            display: block;
+            color: #000;
+            padding-left: 40px;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+            &:after{
+                content: " ";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: url("/src/assets/img/tel_icon.png")
+            }
+        }
+    }
+}
+.bottom_footer{
+    background: #272727;
+    padding: 15px 0px;
+    .link{ 
+        align-items: center;
+        justify-content: center;
+        a{
+            text-decoration: none;
+            color: #7AA357;
+            padding: 0px 15px;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .copyright{
+        color: #fff;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}

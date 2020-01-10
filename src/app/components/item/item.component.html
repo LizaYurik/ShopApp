@@ -1,0 +1,21 @@
+
+<div class="box">
+    
+        <mat-card>
+            <mat-card-title>{{products.name}}</mat-card-title>
+            <div class="img-block">
+                <img mat-card-image src="{{products.imgPath}}" title="{{products.description}}">
+            </div>
+            
+            <mat-card-content>
+                <p class="description">
+                    {{products.description}}
+                </p>
+                <span class="price-product">{{products.price}}</span>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button class="basket-button">В корзину</button>
+            </mat-card-actions>
+        </mat-card>    
+    
+</div>
