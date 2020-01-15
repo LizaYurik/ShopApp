@@ -1,0 +1,95 @@
+<div class="register_form">
+    <div class="row">
+        <h1>Создание учетной записи</h1>
+        <p class="has_account">Уже зарегистрировались? <a routerLink='/login'>Войти!</a></p>
+        <div class="col-xs-12">
+            <div class="box">
+                <form [formGroup]="singUpForm" (ngSubmit)='signup()'>
+                    <mat-form-field>
+                        <input 
+                            matInput
+                            type="text"
+                            formControlName="name"
+                            name="name"
+                            placeholder="Имя"
+                        >
+                        <mat-error *ngIf="form.name.hasError('required')">
+                            Заполните поле
+                        </mat-error>
+                        <mat-error *ngIf="form.name.hasError('pattern')">
+                            Поле должно содержать только буквы
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input 
+                            matInput
+                            type="text"
+                            formControlName="lastName"
+                            name="lastName"
+                            placeholder="Фамилия"
+                        >
+                        <mat-error *ngIf="form.lastName.hasError('required')">
+                            Заполните поле
+                        </mat-error>
+                        <mat-error *ngIf="form.lastName.hasError('pattern')">
+                            Поле должно содержать только буквы
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input 
+                            matInput
+                            type="text"
+                            formControlName="email"
+                            name="email"
+                            placeholder="E-mail"
+                        >
+                        <mat-error *ngIf="form.email.hasError('required')">
+                            Заполните поле
+                        </mat-error>
+                        <mat-error *ngIf="form.email.hasError('email')">
+                            Поле заполнено не верно 
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input 
+                            matInput
+                            type="password"
+                            formControlName="password"
+                            name="password"
+                            placeholder="Пароль"
+                        >
+                        <mat-error *ngIf="form.password.hasError('required')">
+                            Заполните поле
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input 
+                            matInput
+                            type="password"
+                            formControlName="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Повторите Пароль"
+                        >
+                        <mat-error *ngIf="form.confirmPassword.hasError('required')">
+                            Заполните поле
+                        </mat-error>
+                        <mat-error *ngIf="form.confirmPassword.hasError('MatchPassword')">
+                            Не соответсвует полю Пароль
+                        </mat-error>
+                       
+                    </mat-form-field>
+                    <div class="register_form_button">
+                        <button
+                            mat-button
+                            type="submit"
+                            class="button"
+                            [disabled]="singUpForm.invalid"
+                            >
+                            Зарегистрироваться
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

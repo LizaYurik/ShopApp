@@ -52,3 +52,23 @@ $shop-theme: mat-light-theme($shop-primary, $shop-accent, $shop-warn);
   
 html, body { height: 100%; margin:0; padding: 0;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.login_form_button .mat-button:hover .mat-button-focus-overlay, .mat-stroked-button:hover .mat-button-focus-overlay{
+  opacity: 0;
+}
+.mat-form-field.mat-focused .mat-form-field-underline .mat-form-field-ripple{
+  background: #7AA357!important;
+}
+.mat-form-field.mat-form-field-invalid .mat-form-field-ripple, .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent{
+  background: #f44336!important;
+}
+.mat-form-field.mat-focused .mat-form-field-label{
+  color: #7AA357!important;
+}
+.mat-form-field.mat-form-field-invalid .mat-form-field-label{
+  color: #f44336!important;
+}
+.mat-form-field-appearance-legacy .mat-form-field-wrapper{
+  padding-bottom: 25px;
+}
+

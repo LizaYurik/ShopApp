@@ -1,0 +1,50 @@
+<div class="login_form">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Вход в учетную запись</h1>
+            <form [formGroup]="loginForm" (ngSubmit)='login()'>
+                <mat-form-field>
+                    <input
+                      matInput
+                      placeholder="Email"
+                      formControlName="email"
+                      name="email"
+                    />
+                    <mat-error *ngIf="form.email.hasError('required')">
+                        Заполните поле
+                    </mat-error>
+                    <mat-error *ngIf="form.email.hasError('email')">
+                        Поле заполнено не верно 
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input
+                      matInput
+                      type="password"
+                      placeholder="Password"
+                      formControlName="password"
+                      name="password"
+                    />
+                    <mat-error *ngIf="form.password.hasError('required')">
+                        Заполните поле
+                    </mat-error>
+
+                </mat-form-field>
+                <a href="#" class="forfot_pass"></a>
+                <div class="login_form_button">
+                    <button
+                        mat-button
+                        type="submit"
+                        class="button"
+                        [disabled]="loginForm.invalid"
+                    >
+                        Войти
+                    </button>
+                </div>
+            </form>
+            <div class="registration_block">
+                <a routerLink="/signup">Нет учётной записи? Создайте её здесь</a>
+            </div>
+        </div>
+    </div>
+</div>

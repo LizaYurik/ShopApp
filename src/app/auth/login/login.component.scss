@@ -1,0 +1,72 @@
+.login_form{
+    .row{
+        flex-direction: column;
+    }
+    .has_account{
+        font-style: italic;
+        a{
+            color: #434343;
+            transition: all .4s;
+            &:hover{
+                color: #7AA357;
+                text-decoration: none;
+            }
+        }
+    }
+    .mat-form-field{
+        display: block;
+    }
+    .mat-form-field .mat-form-field-label{
+        color: #7AA357;
+    }
+    form{
+        max-width: 50%;
+        margin: 0 auto;
+        margin-top: 55px;
+    }
+    .login_form_button{
+        .mat-button{
+            color: #7AA357;
+            background-color: transparent;
+            box-shadow: none;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 14px;
+            height: 48px;
+            line-height: 48px;
+            padding: 0 25px;
+            border: 1px solid #7AA357;
+            background: transparent;
+            margin: 25px auto;
+            width: 37%;
+            display: block;
+            transition: all .4s;
+            &:hover{
+                color: #000;
+                border: 1px solid #000;
+            }
+        }
+        .mat-button[disabled] {
+            opacity: .5;
+        }
+    }
+    .mat-error{
+        font-style: italic;
+    }
+    .registration_block{
+        border-top: 1px solid #0000003d;
+        padding-top: 25px;
+        margin-bottom: 25px;
+        text-align: center;
+        margin-top: 45px;
+        a{
+            font-size: 16px;
+            color: #434343;
+            transition: all .4s;
+            &:hover{
+                color: #7AA357;
+            }
+        }
+    }
+
+}

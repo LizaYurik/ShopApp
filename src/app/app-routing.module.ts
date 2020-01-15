@@ -1,8 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-import { LoginComponent } from "./login/login.component";
-import { RegistrationComponent } from "./registration/registration.component";
+import { LoginComponent } from "./auth/login/login.component";
+import { RegistrationComponent } from "./auth/registration/registration.component";
 import { HomePageComponent } from "./modules/home-page/home-page.component";
 import { CategoryComponent } from "./modules/category/category.component";
 import { PromotionsComponent } from "./modules/promotions/promotions.component";
